@@ -33,6 +33,8 @@ export function Layout(props: Props) {
         <Stack>
           <SidebarLink href="/">Home</SidebarLink>
           <SidebarLink href="/admin">Admin</SidebarLink>
+          <SidebarLink href="/admin#/posts">Posts</SidebarLink>
+          <SidebarLink href="/admin#/users">Users</SidebarLink>
         </Stack>
         <Stack>
           <Button variant="outline">
