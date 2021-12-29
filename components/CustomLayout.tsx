@@ -1,8 +1,21 @@
 import * as React from 'react';
 import { Layout, LayoutProps } from 'react-admin';
+import { makeStyles } from '@material-ui/styles';
 
-import CustomAppBar from './CustomAppBar';
+const AppBar = () => <div />;
+const Sidebar = () => <div />;
 
-const CustomLayout = (props: LayoutProps) => <Layout {...props} appBar={CustomAppBar} />;
+const useStyles = makeStyles({
+  appFrame: {
+    marginTop: 0,
+  },
+});
+
+const CustomLayout = (props: LayoutProps) => {
+  const classes = useStyles();
+  return (
+    <Layout {...props} appBar={AppBar} sidebar={Sidebar} classes={classes} />
+  );
+};
 
 export default CustomLayout;
